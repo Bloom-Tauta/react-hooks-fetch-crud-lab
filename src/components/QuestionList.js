@@ -7,6 +7,7 @@ function QuestionList({ questions, setQuestions }) {
     fetch("http://localhost:4000/questions")
     .then((r) => r.json())
     .then((data) => setQuestions(data))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleUpdateQuestion(updatedQuestion) {
